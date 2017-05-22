@@ -1,3 +1,7 @@
+[1.2.0]
+-Ahora se genera un log
+-La ruta de la carpeta temporal ahora va entre comillas por si hay espacios
+
 [1.1.0]
 -Añadida la eliminación de una clave de registro adicional para la version de escritorio
 -Mejor apariencia gráfica

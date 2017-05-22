@@ -1,9 +1,10 @@
 @echo off
 title Herramienta de eliminacion de Forbix (USB)
+SET actual=%~dp0
 color a
 echo -----------------------
 echo --FORBIX REMOVAL TOOL--
-echo ----Version 1.1.0------
+echo ----Version 1.2.0------
 echo -----------------------
 echo Creado por Leandro Botella
 echo.
@@ -24,14 +25,14 @@ pause>nul
 cls
 color e
 echo Aplicando cambio de atributos.
-attrib -h -r -s /s /d *.*
+attrib -h -r -s /s /d *.* 1>"%actual%registro_desinfeccion.txt" 2>&1
 echo Eliminando archivo infectado.
-del /F /Q Manuel.doc
+del /F /Q Manuel.doc 1>>"%actual%registro_desinfeccion.txt" 2>&1
 echo Eliminando accesos directos.
-del /F /Q *.lnk
+del /F /Q *.lnk 1>>"%actual%registro_desinfeccion.txt" 2>&1
+cls
 color b
-echo.
-echo Proceso terminado! Si algun paso anterior genero un error es posible que la infeccion persista.
+echo Proceso terminado! Revisa el archivo registro_desinfeccion.txt para mas informacion.
 echo Creado por Leandro Botella.
 echo.
 pause
