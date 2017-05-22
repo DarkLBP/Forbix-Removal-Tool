@@ -1,2 +1,6 @@
+[1.1.0]
+-Añadida la eliminación de una clave de registro adicional para la version de escritorio
+-Mejor apariencia gráfica
+
 [1.0.0]
 -Version inicial
